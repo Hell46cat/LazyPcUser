@@ -33,7 +33,7 @@ func main() {
 		command := update.Message.Command() // Получаем команду
 		switch command {
 		case "start":
-			msg := tgbotapi.NewMessage(update.Message.Chat.ID, "Привет! Для управления громкостью используйте команду /volume (и цифру которая будет являться процентами от общей громкости) Например /volume 50")
+			msg := tgbotapi.NewMessage(update.Message.Chat.ID, "Привет! Для управления громкостью используйте команду /volume (и цифру которая будет являться процентами от общей громкости) Например /volume 50\nИли /whatvolume чтобы узнать какая громкость установлена")
 			bot.Send(msg)
 		case "volume":
 			err := volume(update, bot)
